@@ -78,12 +78,6 @@ const Header = ({ siteTitle }) => {
       <NavStyle>
         <ul>
           <li><Link to='/'><Logo>news</Logo></Link></li>
-          {/* <li><span>|</span></li>
-          <li>
-            <Link to='/collection'>Essentials</Link>
-          </li>
-          <li><span>|</span></li>
-          <li><Link to='/signup'>Sign Up</Link></li>*/}
           <li><span>|</span></li>
           <li><Link to='/about'>All About Us</Link></li>
         </ul>
