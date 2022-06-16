@@ -9,14 +9,17 @@ import Footer from "./footer";
 
 import "./layout.css";
 
-const GLOBAL_BACKGROUND_COLOR = "#FDFAF5";
-const GLOBAL_LINK_COLOR = "#105652";
-const GLOBAL_PRIMARY_ACCENT_COLOR = "#B91646";
-const GLOBAL_SECONDARY_ACCENT_COLOR = "#105652";
-const GLOBAL_TRINARY_ACCENT_COLOR = "#FBF3E4";
-const GLOBAL_PRIMARY_FONT_FAMILY = `"Amatic SC"` ;
-const GLOBAL_SECONDARY_FONT_FAMILY = `"Amatic SC"`;
-const GLOBAL_FONT_FAMILY = `monospace, sans-serif`;
+const GLOBAL_BACKGROUND_COLOR       = "#FDFAF5";
+const GLOBAL_LINK_COLOR             = "#FE7E6D";
+const GLOBAL_VLINK_COLOR            = "#CCD1E4";
+const GLOBAL_HLINK_COLOR            = "#CCD1E4";
+const GLOBAL_TEXT_COLOR             = "#323232";
+const GLOBAL_PRIMARY_ACCENT_COLOR   = "#2F3A8F";
+const GLOBAL_SECONDARY_ACCENT_COLOR = "#FE7E6D";
+const GLOBAL_TRINARY_ACCENT_COLOR   = "#CCD1E4";
+const GLOBAL_PRIMARY_FONT_FAMILY    = `"Didot"` ;
+const GLOBAL_SECONDARY_FONT_FAMILY  = `"Didot"`;
+const GLOBAL_FONT_FAMILY            = `'Helvetica Neue', Helvetica, Arial, serif`;
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -40,25 +43,37 @@ const LayoutContainerStyle = styled.div`
     text-indent: 1.5rem;
   }
 
+  .accent {
+    color: ${GLOBAL_PRIMARY_ACCENT_COLOR};
+  }
+
   h1, h2, h3, h4, h5, h6 {
-    font-family: ${GLOBAL_PRIMARY_FONT_FAMILY};
+    font-family: ${GLOBAL_FONT_FAMILY};
+    color: ${GLOBAL_TEXT_COLOR};
     font-weight: 700;
     text-shadow: 0 0 2px rgba(100,100,100,0.5);
   }
 
   h1 {
-    color: ${GLOBAL_PRIMARY_ACCENT_COLOR};
+    font-family: ${GLOBAL_PRIMARY_FONT_FAMILY};
     font-size: 3rem;
   }
 
   h2 {
-    color: ${GLOBAL_SECONDARY_ACCENT_COLOR};
     font-size: 2rem;
   }
 
   a {
     text-decoration: none;
     color: ${GLOBAL_LINK_COLOR};
+  }
+
+  a:hover {
+    color: ${GLOBAL_HLINK_COLOR};
+  }
+
+  a:visited {
+    color: ${GLOBAL_VLINK_COLOR};
   }
 `;
 
