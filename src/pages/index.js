@@ -4,25 +4,34 @@ import { Link } from 'gatsby';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 
-const ViewPortWrapper = styled.div`
-  height: 77vh;
-  margin: 0;
-  overflow-y: hidden;
+const PreStyle = styled.div`
+  margin: auto;
+  margin-bottom: 1rem;
+  text-align: center;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  max-witdh: 75vh;
 
   @media only screen and (min-width: 768px) {
-    height: 97vh;
+    font-size: 16px;
+    width: 100vh;
+    max-witdh: 100vh;
   }
 `;
 
 const IndexPage = () => (
   <Layout>
-    <SEO
-      title=""
-      description=""
+		<SEO
+			title="The Crucible Standard"
+			description="The Crucible Standard"
     />
-    <ViewPortWrapper>
-
-    </ViewPortWrapper>
+    <PreStyle>
+      <h1>The Crucible Standard</h1>
+			<h2>Index</h2>
+			<p><br /></p>
+			<p><br /></p>
+			<p><br /></p>
+	  </PreStyle>
   </Layout>
 )
 
