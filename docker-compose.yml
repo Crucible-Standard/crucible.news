@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  crucible.news-site:
+    container_name: crucible
+    build: .
+    command: ["npm", "run", "start"]
+    ports:
+      - "3431:3431"
+    volumes:
+      - ${PWD}:/var/www:delegated
