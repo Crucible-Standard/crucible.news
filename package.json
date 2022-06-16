@@ -1,7 +1,7 @@
 {
-  "name": "shrewd",
+  "name": "crucible.news",
   "version": "0.4.1",
-  "description": "A simple API which gives lunar phase information",
+  "description": "",
   "repository": {
     "type": "git",
     "url": "https://github.com/Crucible-Standard/crucible.news"

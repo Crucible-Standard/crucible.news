@@ -61,7 +61,7 @@ function SEO({ description, lang, meta, image: metaImage, title, pathname }) {
         // },
         {
           property: `og:site_name`,
-          content: `Sage AF`,
+          content: `The Crucible Standard`,
         },
         {
           property: `og:title`,
