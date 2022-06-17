@@ -16,6 +16,13 @@ const FooterContainerStyle = styled.footer`
   h3 {
     color: ${style.global.trinary_accent_color};
   }
+  p {
+    color: ${style.global.trinary_accent_color};
+  }
+  a {
+    text-decoration: none;
+    color: ${style.global.trinary_accent_color};
+  }
 `;
 
 const FooterTop = styled.div`
@@ -26,6 +33,13 @@ const FooterTop = styled.div`
   display: inline-block;
 
   h3 {
+    color: ${style.global.trinary_accent_color};
+  }
+  p {
+    color: ${style.global.trinary_accent_color};
+  }
+  a {
+    text-decoration: none;
     color: ${style.global.trinary_accent_color};
   }
 
@@ -42,7 +56,9 @@ const FooterCol = styled.div`
   h3 {
     color: ${style.global.trinary_accent_color};
   }
-
+  p {
+    color: ${style.global.trinary_accent_color};
+  }
   a {
     text-decoration: none;
     color: ${style.global.trinary_accent_color};
@@ -64,6 +80,13 @@ const FooterBot = styled.div`
   h3 {
     color: ${style.global.trinary_accent_color};
   }
+  p {
+    color: ${style.global.trinary_accent_color};
+  }
+  a {
+    text-decoration: none;
+    color: ${style.global.trinary_accent_color};
+  }
 
   @media only screen and (min-width: 768px) {
     margin-left: 25vw;
@@ -81,11 +104,26 @@ const FooterVersion = styled.div`
   float: right;
   padding: 1rem;
 `;
+const FooterHeadliners = styled.p`
+  color: ${style.global.trinary_accent_color};
+  font-size: 16px;
+  font-weight: 900;
+`;
+
 
 const FooterWrapper = styled.div`
   width: 100%;
   font-size: 10px;
   color: ${style.global.trinary_accent_color};
+
+  p {
+    color: ${style.global.trinary_accent_color};
+  }
+  a {
+    text-decoration: none;
+    color: ${style.global.trinary_accent_color};
+  }
+
   @media only screen and (min-width: 768px) {
     font-size: 12px;
     width: 50vw;
@@ -108,15 +146,15 @@ const Footer = () => (
     <FooterWrapper>
       <FooterTop>
         <FooterCol>
-          <h3>About</h3>
+          <FooterHeadliners>About</FooterHeadliners>
           <p><a href="#">Corperate Information</a></p>
           <p><a href="#">Jobs</a></p>
           <p><a href="#">Media Relations</a></p>
           <p><a href="#">Sitemap</a></p>
         </FooterCol>
         <FooterCol>
-          <h3>Legal</h3>
-          <p><a href="#">FAQ</a></p>
+          <FooterHeadliners>Legal</FooterHeadliners>
+          <p><Link to='/faq'>FAQ</Link></p>
           <p><a href="#">Terms of Use</a></p>
           <p><a href="#">Privacy Policy</a></p>
           <p><a href="#">Do Not Sell my Personal Information</a></p>

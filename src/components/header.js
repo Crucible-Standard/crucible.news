@@ -7,36 +7,34 @@ import { style } from "./style";
 
 const HeaderContainerStyle = styled.div`
   position: relative;
+  top: 0;
+  position: sticky;
   height: 50px;
   border-top: 5px solid #FE7E6D;
   background: ${style.global.primary_accent_color};
-  top: 0;
-  position: sticky;
+  color: ${style.global.trinary_accent_color};
 `;
 
 const HeaderStyle = styled.div`
   background: ${style.global.primary_accent_color};
   width: 100%;
   height: 100%;
+  color: ${style.global.trinary_accent_color};
 
   a {
     text-decoration: none;
-    color: #FEECE9;
-  }
-
-  nav {
-    min-width: 50vw;
-    font-family: ${style.global.font_family};
-    line-height: 1.1 rem;
+    color: ${style.global.trinary_accent_color};
   }
 `;
 
 const NavStyle = styled.nav`
+  color: ${style.global.trinary_accent_color};
+  font-family: ${style.global.font_family};
+  line-height: 1.1 rem;
   width: 100%;
   font-size: 10px;
   margin: auto;
-  overflow: hidden;
-  padding-left: 5vw;
+  padding-left: 20vw;
 
   .active {
     text-decoration: underline;
@@ -48,13 +46,16 @@ const NavStyle = styled.nav`
   }
 
   ul {
+    position: absolute;
+    top: 20px;
+    height: 50px;
     margin: 0;
-    margin-top: 20px;
     padding: 0;
     list-style: none;
   }
 
   li {
+    padding: 1rem;
     display: inline;
     font-weight: 900;
   }
@@ -62,8 +63,9 @@ const NavStyle = styled.nav`
   @media only screen and (min-width: 768px) {
     font-size: 16px;
     max-width: 50vw;
+    padding-left: 15vw;
     li {
-      padding: 0.85rem;
+      padding: 2rem;
     }
   }
 `;
@@ -71,19 +73,27 @@ const NavStyle = styled.nav`
 const Logo = styled.img`
   position: absolute;
   top: 5px;
-  left: 21vw;
-  border-radius: 50%;
+  left: 2rem;
   width: 90px;
   height: 90px;
+  border-radius: 50%;
+
+  @media only screen and (min-width: 768px) {
+    position: relative;
+    top: -20px;
+    left: 20vw;
+    width: 180px;
+    height: 180px;
+  }
 `;
 
 const Header = ({ siteTitle }) => {
   return (
    <HeaderContainerStyle>
     <HeaderStyle>
+     <Logo src="https://raw.githubusercontent.com/BeauBouchard/BeauBouchard/main/assets/media/images/logos/crucible.png" />
       <NavStyle>
         <ul>
-          <li><Logo src="https://raw.githubusercontent.com/BeauBouchard/BeauBouchard/main/assets/media/images/logos/crucible.png" /></li>
           <li><Link to='/'>News</Link></li>
           <li><Link to='/finance'>Finance</Link></li>
           <li><Link to='/weather'>Weather</Link></li>
