@@ -49,7 +49,7 @@ const NavStyle = styled.nav`
 
   ul {
     margin: 0;
-    margin-top:20px;
+    margin-top: 20px;
     padding: 0;
     list-style: none;
   }
@@ -71,7 +71,7 @@ const NavStyle = styled.nav`
 const Logo = styled.img`
   position: absolute;
   top: 5px;
-  left: 23vw;
+  left: 21vw;
   border-radius: 50%;
   width: 90px;
   height: 90px;

@@ -12,6 +12,10 @@ const FooterContainerStyle = styled.footer`
   text-align: center;
   margin: auto;
   padding-top: 1rem;
+
+  h3 {
+    color: ${style.global.trinary_accent_color};
+  }
 `;
 
 const FooterTop = styled.div`
@@ -25,20 +29,25 @@ const FooterTop = styled.div`
     color: ${style.global.trinary_accent_color};
   }
 
-  a {
-    text-decoration: none;
-    color: ${style.global.trinary_accent_color};
-  }
-
   @media only screen and (min-width: 768px) {
     margin-left: 25vw;
   }
 `;
 
 const FooterCol = styled.div`
+  color: ${style.global.trinary_accent_color};
   display: inline-block;
-
   float: right;
+
+  h3 {
+    color: ${style.global.trinary_accent_color};
+  }
+
+  a {
+    text-decoration: none;
+    color: ${style.global.trinary_accent_color};
+  }
+
   @media only screen and (min-width: 768px) {
     width: 12rem;
   }
@@ -50,8 +59,12 @@ const FooterBot = styled.div`
   position: reltative;
   display: inline-block;
   vertical-align: top;
-  border-top: 1px solid #FE7E6D;
-  padding: 1rem;
+  border-top: 1px solid ${style.global.trinary_accent_color};
+
+  h3 {
+    color: ${style.global.trinary_accent_color};
+  }
+
   @media only screen and (min-width: 768px) {
     margin-left: 25vw;
   }
@@ -60,11 +73,13 @@ const FooterBot = styled.div`
 const FooterCopy = styled.div`
   display: inline-block;
   float: left;
+  padding: 1rem;
 `;
 
 const FooterVersion = styled.div`
   display: inline-block;
-  float:right;
+  float: right;
+  padding: 1rem;
 `;
 
 const FooterWrapper = styled.div`
