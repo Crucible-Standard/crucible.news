@@ -1,82 +1,82 @@
 import React from "react";
 import styled from "styled-components";
 import { Link } from "gatsby";
+import { style } from "./style";
 const pkjson = require("../../package.json");
 
-const FooterContainerStyle = styled.div`
-  width: 100%;
-  border-top: thin solid rgb(223, 216, 202);
-  margin-top: 2rem;
+const FooterContainerStyle = styled.footer`
   position: relative;
+  width: 100%;
+  background: ${style.global.primary_accent_color};
+  color: ${style.global.trinary_accent_color};
   text-align: center;
-  margin-bottom: 1rem;
-  text-align: center;
+  margin: auto;
+  padding-top: 1rem;
 `;
 
-const FooterNavStyle = styled.footer`
+const FooterTop = styled.div`
   width: 100%;
   font-size: 10px;
-  color: #105652;
-  line-height: 1.1 rem;
-  text-shadow: 0 0 2px rgba(100,100,100,0.5);
-  margin: auto;
+  color: ${style.global.trinary_accent_color};
   overflow: hidden;
+  display: inline-block;
+
+  h3 {
+    color: ${style.global.trinary_accent_color};
+  }
 
   a {
     text-decoration: none;
-    color: #105652;
-  }
-
-  .active {
-    text-decoration: underline;
-  }
-
-  ul {
-    margin: 0;
-    margin-top:1rem;
-    padding: 0;
-    list-style: none;
-  }
-
-  li {
-    padding: 0.3rem;
-    display:inline;
-    span {
-      color: #B91646;
-    }
+    color: ${style.global.trinary_accent_color};
   }
 
   @media only screen and (min-width: 768px) {
-    font-size: 12px;
-    width: 40rem;
-    li {
-      padding: 0.85rem;
-    }
+    margin-left: 25vw;
   }
 `;
 
-const StandOutFont = styled.span`
-  font-family: "Amatic SC";
-  font-weight: 700;
-  color: #B91646;
-	padding: 0.5rem;
-  text-shadow: 0 0 2px rgba(100,100,100,0.5);
-  font-size: 1.2rem;
+const FooterCol = styled.div`
+  display: inline-block;
+
+  float: right;
+  @media only screen and (min-width: 768px) {
+    width: 12rem;
+  }
 `;
 
-const CopyRightStyleVersionStyle = styled.div`
+const FooterBot = styled.div`
+  width: 100%;
+  color: ${style.global.trinary_accent_color};
+  position: reltative;
+  display: inline-block;
+  vertical-align: top;
+  border-top: 1px solid #FE7E6D;
+  padding: 1rem;
+  @media only screen and (min-width: 768px) {
+    margin-left: 25vw;
+  }
+`;
+
+const FooterCopy = styled.div`
+  display: inline-block;
+  float: left;
+`;
+
+const FooterVersion = styled.div`
+  display: inline-block;
+  float:right;
+`;
+
+const FooterWrapper = styled.div`
+  width: 100%;
   font-size: 10px;
-  color: #105652;
-  text-shadow: 0 0 2px rgba(100,100,100,0.5);
-  margin-top: 0.5rem;
-
+  color: ${style.global.trinary_accent_color};
   @media only screen and (min-width: 768px) {
     font-size: 12px;
-    width: 40rem;
-    margin-top: 0.5rem;
+    width: 50vw;
+    max-width: 50vw;
   }
 `;
-
 
 
 /**
@@ -90,16 +90,32 @@ const CopyRightStyleVersionStyle = styled.div`
  */
 const Footer = () => (
   <FooterContainerStyle>
-    <FooterNavStyle>
-      <ul>
-        <li><a href="#">Terms of Use</a></li>
-        <li><span>|</span></li>
-        <li><a href="#">Sitemap</a></li>
-        <li><span>|</span></li>
-        <li><Link to="/privacy">Privacy Policy</Link></li>
-      </ul>
-      <CopyRightStyleVersionStyle>©{new Date().getFullYear()} <StandOutFont>Crucible Media</StandOutFont> LLC. All Rights Reserved. Client: v{pkjson.version}</CopyRightStyleVersionStyle>
-    </FooterNavStyle>
+    <FooterWrapper>
+      <FooterTop>
+        <FooterCol>
+          <h3>About</h3>
+          <p><a href="#">Corperate Information</a></p>
+          <p><a href="#">Jobs</a></p>
+          <p><a href="#">Media Relations</a></p>
+          <p><a href="#">Sitemap</a></p>
+        </FooterCol>
+        <FooterCol>
+          <h3>Legal</h3>
+          <p><a href="#">FAQ</a></p>
+          <p><a href="#">Terms of Use</a></p>
+          <p><a href="#">Privacy Policy</a></p>
+          <p><a href="#">Do Not Sell my Personal Information</a></p>
+        </FooterCol>
+      </FooterTop>
+      <FooterBot>
+        <FooterCopy>
+          ©{new Date().getFullYear()} Crucible LLC. All Rights Reserved.
+        </FooterCopy>
+        <FooterVersion>
+          v{pkjson.version}
+        </FooterVersion>
+      </FooterBot>
+    </FooterWrapper>
   </FooterContainerStyle>
 );
 

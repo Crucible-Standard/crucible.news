@@ -4,22 +4,23 @@ import styled,{ createGlobalStyle }  from "styled-components";
 import { useStaticQuery, graphql } from "gatsby";
 import { CookiesProvider } from "react-cookie";
 
+import { style } from "./style";
 import Header from "./header";
 import Footer from "./footer";
 
 import "./layout.css";
 
-const GLOBAL_BACKGROUND_COLOR       = "#FDFAF5";
-const GLOBAL_LINK_COLOR             = "#FE7E6D";
-const GLOBAL_VLINK_COLOR            = "#CCD1E4";
-const GLOBAL_HLINK_COLOR            = "#CCD1E4";
-const GLOBAL_TEXT_COLOR             = "#323232";
-const GLOBAL_PRIMARY_ACCENT_COLOR   = "#2F3A8F";
-const GLOBAL_SECONDARY_ACCENT_COLOR = "#FE7E6D";
-const GLOBAL_TRINARY_ACCENT_COLOR   = "#CCD1E4";
-const GLOBAL_PRIMARY_FONT_FAMILY    = `"Didot"` ;
-const GLOBAL_SECONDARY_FONT_FAMILY  = `"Didot"`;
-const GLOBAL_FONT_FAMILY            = `'Helvetica Neue', Helvetica, Arial, serif`;
+const GLOBAL_BACKGROUND_COLOR       = style.global.background_color;
+const GLOBAL_LINK_COLOR             = style.global.link_color;
+const GLOBAL_VLINK_COLOR            = style.global.vlink_color;
+const GLOBAL_HLINK_COLOR            = style.global.hlink_color;
+const GLOBAL_TEXT_COLOR             = style.global.text_color;
+const GLOBAL_PRIMARY_ACCENT_COLOR   = style.global.primary_accent_color;
+const GLOBAL_SECONDARY_ACCENT_COLOR = style.global.secodnary_accent_color;
+const GLOBAL_TRINARY_ACCENT_COLOR   = style.global.trinary_accent_color;
+const GLOBAL_PRIMARY_FONT_FAMILY    = style.global.primary_font_family;
+const GLOBAL_SECONDARY_FONT_FAMILY  = style.global.secondary_font_family;
+const GLOBAL_FONT_FAMILY            = style.global.font_family;
 
 const GlobalStyle = createGlobalStyle`
   body {

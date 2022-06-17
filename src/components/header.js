@@ -3,32 +3,31 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import styled from 'styled-components';
 import { StoreContext } from "../context/store-context"
-
+import { style } from "./style";
 
 const HeaderContainerStyle = styled.div`
   position: relative;
-  text-align: center;
-  border-bottom: thin solid rgb(223, 216, 202);
+  height: 50px;
+  border-top: 5px solid #FE7E6D;
+  background: ${style.global.primary_accent_color};
   top: 0;
   position: sticky;
-  z-index: 10;
-  background: inherit;
 `;
 
 const HeaderStyle = styled.div`
+  background: ${style.global.primary_accent_color};
   width: 100%;
   height: 100%;
-  margin-bottom: 1rem;
 
   a {
     text-decoration: none;
-    color: #105652;
+    color: #FEECE9;
   }
+
   nav {
-    margin: auto;
-    font-family: 'Source Code Pro', Consolas, Menlo, Monaco, 'Lucida Console', 'Liberation Mono', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Courier New', monospace, sans-serif;
+    min-width: 50vw;
+    font-family: ${style.global.font_family};
     line-height: 1.1 rem;
-    text-shadow: 0 0 2px rgba(100,100,100,0.5);
   }
 `;
 
@@ -37,39 +36,46 @@ const NavStyle = styled.nav`
   font-size: 10px;
   margin: auto;
   overflow: hidden;
+  padding-left: 5vw;
+
   .active {
     text-decoration: underline;
   }
+
+  a {
+    text-decoration: none;
+    color: #FEECE9;
+  }
+
   ul {
     margin: 0;
-    margin-top:1rem;
+    margin-top:20px;
     padding: 0;
     list-style: none;
   }
+
   li {
-    padding: 0.3rem;
-    display:inline;
-    span {
-      color: #B91646;
-    }
+    display: inline;
+    font-weight: 900;
   }
+
   @media only screen and (min-width: 768px) {
     font-size: 16px;
-    width: 40rem;
+    max-width: 50vw;
     li {
       padding: 0.85rem;
     }
   }
 `;
 
-const Logo = styled.span`
-  color: #B91646;
-  font-family: 'Amatic SC';
-  font-weight: 700;
-  font-size: 3rem;
+const Logo = styled.img`
+  position: absolute;
+  top: 5px;
+  left: 23vw;
+  border-radius: 50%;
+  width: 90px;
+  height: 90px;
 `;
-
-
 
 const Header = ({ siteTitle }) => {
   return (
@@ -77,9 +83,10 @@ const Header = ({ siteTitle }) => {
     <HeaderStyle>
       <NavStyle>
         <ul>
-          <li><Link to='/'><Logo>news</Logo></Link></li>
-          <li><span>|</span></li>
-          <li><Link to='/about'>All About Us</Link></li>
+          <li><Logo src="https://raw.githubusercontent.com/BeauBouchard/BeauBouchard/main/assets/media/images/logos/crucible.png" /></li>
+          <li><Link to='/'>News</Link></li>
+          <li><Link to='/finance'>Finance</Link></li>
+          <li><Link to='/weather'>Weather</Link></li>
         </ul>
       </NavStyle>
     </HeaderStyle>

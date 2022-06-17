@@ -14,7 +14,7 @@ const PreStyle = styled.div`
 
   @media only screen and (min-width: 768px) {
     font-size: 16px;
-    width: 100vh;
+    min-height: 700px;
     max-witdh: 100vh;
   }
 `;
