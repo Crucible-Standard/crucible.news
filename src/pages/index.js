@@ -8,11 +8,10 @@ import { style } from "../components/style";
 const PreStyle = styled.div`
   width: 100%;
   margin: auto;
-  margin-top: -2rem;
   text-align: center;
-
   padding-top: 2rem;
   background-color: #fff;
+  z-index: 0;
 
   p {
 
