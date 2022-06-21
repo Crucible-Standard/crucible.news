@@ -7,7 +7,7 @@ import Logo from "./logo";
 
 const HeaderContainerStyle = styled.div`
   width: 100%;
-  height: 125px;
+  height: 50px;
   border-top: 3px solid ${style.global.secondary_accent_color};
   background: ${style.global.primary_accent_color};
 `;
@@ -19,8 +19,8 @@ const HeaderStyle = styled.div`
 
 const HeaderLogoContainerStyle = styled.div`
   width: 100px;
-  height: 111px;
-  margin-top: 16px;
+  height: 96px;
+  margin-top: 5px;
   margin-left: -45px;
   z-index: 2;
 `;
@@ -46,7 +46,7 @@ const NavStyle = styled.nav`
 
   ul {
     position: relative;
-    top: -75px;
+    top: -80px;
     left: 75px;
     height: 97px;
     margin: 0;

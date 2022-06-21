@@ -6,8 +6,6 @@ import SEO from '../components/seo';
 import { style } from "../components/style";
 
 const PreStyle = styled.div`
-  position: relative;
-  top: -38px;
   width: 100%;
   margin: auto;
   text-align: center;
