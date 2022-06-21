@@ -10,7 +10,7 @@ const HeaderContainerStyle = styled.div`
   top: 0;
   position: sticky;
   height: 50px;
-  border-top: 5px solid #FE7E6D;
+  border-top: 3px solid ${style.global.secondary_accent_color};
   background: ${style.global.primary_accent_color};
   color: ${style.global.trinary_accent_color};
 `;
