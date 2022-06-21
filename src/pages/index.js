@@ -6,13 +6,14 @@ import SEO from '../components/seo';
 import { style } from "../components/style";
 
 const PreStyle = styled.div`
+  position: relative;
+  top: -38px;
   width: 100%;
   margin: auto;
-  margin-top: -2rem;
   text-align: center;
-
   padding-top: 2rem;
   background-color: #fff;
+  z-index: 0;
 
   p {
 

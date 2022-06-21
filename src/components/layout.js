@@ -99,11 +99,11 @@ const Layout = ({ children }) => {
     <CookiesProvider>
       <GlobalStyle/>
       <LayoutContainerStyle>
+        <Header/>
         <LayoutStyle>
-          <Header/>
-            <main>{children}</main>
-          <Footer/>
+         <main>{children}</main>
         </LayoutStyle>
+        <Footer/>
       </LayoutContainerStyle>
     </CookiesProvider>
   )

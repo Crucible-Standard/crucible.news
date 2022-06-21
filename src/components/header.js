@@ -2,39 +2,37 @@ import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
 import React from 'react';
 import styled from 'styled-components';
-import { StoreContext } from "../context/store-context"
 import { style } from "./style";
+import Logo from "./logo";
 
 const HeaderContainerStyle = styled.div`
-  position: relative;
-  top: 0;
-  position: sticky;
-  height: 50px;
+  width: 100%;
+  height: 125px;
   border-top: 3px solid ${style.global.secondary_accent_color};
   background: ${style.global.primary_accent_color};
-  color: ${style.global.trinary_accent_color};
 `;
 
 const HeaderStyle = styled.div`
   background: ${style.global.primary_accent_color};
   width: 100%;
-  height: 100%;
-  color: ${style.global.trinary_accent_color};
+`;
 
-  a {
-    text-decoration: none;
-    color: ${style.global.trinary_accent_color};
-  }
+const HeaderLogoContainerStyle = styled.div`
+  width: 100px;
+  height: 111px;
+  margin-top: 16px;
+  margin-left: -45px;
+  z-index: 2;
 `;
 
 const NavStyle = styled.nav`
-  color: ${style.global.trinary_accent_color};
   font-family: ${style.global.font_family};
   line-height: 1.1 rem;
   width: 100%;
   font-size: 10px;
   margin: auto;
-  padding-left: 20vw;
+  height: 100%;
+  color: #FEECE9;
 
   .active {
     text-decoration: underline;
@@ -43,18 +41,21 @@ const NavStyle = styled.nav`
   a {
     text-decoration: none;
     color: #FEECE9;
+    height: 97px;
   }
 
   ul {
-    position: absolute;
-    top: 20px;
-    height: 50px;
+    position: relative;
+    top: -75px;
+    left: 75px;
+    height: 97px;
     margin: 0;
     padding: 0;
     list-style: none;
   }
 
   li {
+    height: 97px;
     padding: 1rem;
     display: inline;
     font-weight: 900;
@@ -63,27 +64,9 @@ const NavStyle = styled.nav`
   @media only screen and (min-width: 768px) {
     font-size: 16px;
     max-width: 50vw;
-    padding-left: 15vw;
     li {
       padding: 2rem;
     }
-  }
-`;
-
-const Logo = styled.img`
-  position: absolute;
-  top: 5px;
-  left: 2rem;
-  width: 90px;
-  height: 90px;
-  border-radius: 50%;
-
-  @media only screen and (min-width: 768px) {
-    position: relative;
-    top: -20px;
-    left: 20vw;
-    width: 180px;
-    height: 180px;
   }
 `;
 
@@ -91,8 +74,10 @@ const Header = ({ siteTitle }) => {
   return (
    <HeaderContainerStyle>
     <HeaderStyle>
-     <Logo src="https://raw.githubusercontent.com/BeauBouchard/BeauBouchard/main/assets/media/images/logos/crucible.png" />
       <NavStyle>
+        <HeaderLogoContainerStyle>
+          <Logo />
+        </HeaderLogoContainerStyle>
         <ul>
           <li><Link to='/'>News</Link></li>
           <li><Link to='/finance'>Finance</Link></li>
