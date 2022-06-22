@@ -38,11 +38,6 @@ const LayoutContainerStyle = styled.div`
   padding: 0;
   position: relative;
 
-  p {
-    text-align: justify;
-    text-justify: inter-word;
-    text-indent: 1.5rem;
-  }
 
   .accent {
     color: ${GLOBAL_PRIMARY_ACCENT_COLOR};
