@@ -71,6 +71,26 @@ const LayoutContainerStyle = styled.div`
   a:visited {
     color: ${GLOBAL_VLINK_COLOR};
   }
+
+  .b {
+    font-weight: 700;
+  }
+
+  .i {
+    font-style: italic;
+  }
+
+  .u {
+    text-decoration: underline;
+  }
+
+  .s {
+    font-style: oblique;
+  }
+
+  .justify {
+    text-align: justify;
+  }
 `;
 
 const LayoutStyle = styled.div`

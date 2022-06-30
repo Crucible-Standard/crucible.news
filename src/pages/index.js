@@ -14,7 +14,7 @@ const PreStyle = styled.div`
   z-index: 0;
 
   p {
-
+    text-align: justify;
   }
 
   @media only screen and (min-width: 768px) {

@@ -47,7 +47,7 @@ const FAQPage = () => (
       <h1>The Crucible Standard</h1>
 			<h2>FAQ</h2>
       <Question>Is this a REAL News Organization?</Question>
-      <Answer>Isn't all main stream media fake?</Answer>
+      <Answer>Isn't all main stream media fake? We only report verified journalists mostly all with first connections to the source of information. We do a second level verification of these facts to ensure only the truth is left.</Answer>
     </PreStyle>
   </Layout>
 )
